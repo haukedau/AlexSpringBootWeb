@@ -1,5 +1,6 @@
-package net.fiol.demo.alexa.handlers;
+package net.fiol.demo.alexa.Intents;
 
+import net.fiol.demo.alexa.handlers.IntentHandler;
 import org.springframework.stereotype.Component;
 
 import com.amazon.speech.slu.Intent;
@@ -12,18 +13,15 @@ import com.amazon.speech.ui.PlainTextOutputSpeech;
 import net.fiol.demo.alexa.utils.AlexaUtils;
 
 @Component
-public class AmazonStopIntentHandler implements IntentHandler {
+public class AmazonHelpIntentHandler implements IntentHandler {
 
 	@Override
 	public SpeechletResponse handleIntent(Intent intent, IntentRequest request, Session session) {
-
-		String speechText= "OK. Goodbye";
 		
-		Card card = AlexaUtils.newCard("See ya later...", speechText);
-		PlainTextOutputSpeech speech = AlexaUtils.newSpeech(speechText, false);
+		Card card = AlexaUtils.newCard("Help", AlexaUtils.SamplesHelpText);
+		PlainTextOutputSpeech speech = AlexaUtils.newSpeech(AlexaUtils.SamplesHelpText, false);
 		
-		return AlexaUtils.newSpeechletResponse(card, speech, session, true);
-
+		return AlexaUtils.newSpeechletResponse(card, speech, session, false);
 	}
 
 }

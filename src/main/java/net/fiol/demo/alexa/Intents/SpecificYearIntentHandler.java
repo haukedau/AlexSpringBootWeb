@@ -1,5 +1,6 @@
-package net.fiol.demo.alexa.handlers;
+package net.fiol.demo.alexa.Intents;
 
+import net.fiol.demo.alexa.handlers.IntentHandler;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

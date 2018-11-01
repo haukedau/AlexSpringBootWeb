@@ -1,5 +1,6 @@
-package net.fiol.demo.alexa.handlers;
+package net.fiol.demo.alexa.Intents;
 
+import net.fiol.demo.alexa.handlers.IntentHandler;
 import org.springframework.stereotype.Component;
 
 import com.amazon.speech.slu.Intent;
